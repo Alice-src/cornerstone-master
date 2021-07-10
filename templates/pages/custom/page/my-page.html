@@ -1,0 +1,41 @@
+{{#partial "page"}}
+
+<div class="coffee-hero">
+    <h3 class="coffee-hero__mini-header">Your Personalized Coffee</h3>
+    <h1 class="coffee-hero__header">COFFEE BUILD YOUR BASE</h1>
+<div class="coffee-hero__blocks-section">
+    <div class="coffee-hero__block">
+        <img class="coffee-hero__image" src="{{cdn "/img/ic.png"}}" alt="coffee_shop">
+        <h3 class="coffee-hero__block-header">Source</h3>
+        <h4 class="coffee-hero__description">Arabica and Robusta coffee beans complies with international standards.</h4>
+    </div>
+
+    <div class="coffee-hero__block">
+        <img class="coffee-hero__image" src="{{cdn "/img/IC2.png"}}" alt="coffee_quality">
+        <h3 class="coffee-hero__block-header">Quality</h3>
+        <h4 class="coffee-hero__description">Quality Each coffee bean is a highly concentrated process of coffee artisans.</h4>
+    </div>
+
+    <div class="coffee-hero__block">
+        <img class="coffee-hero__image" src="{{cdn "/img/IC3.png"}}" alt="coffee_cup">
+        <h3 class="coffee-hero__block-header">Grains</h3>
+        <h4 class="coffee-hero__description">70% of the quality of a cup of coffee comes from the origin and quality of the green bean.</h4>
+    </div>
+
+    <div class="coffee-hero__block">
+        <img class="coffee-hero__image" src="{{cdn "/img/IC4.png"}}" alt="coffee_machine">
+        <h3 class="coffee-hero__block-header">Preparation</h3>
+        <h4 class="coffee-hero__description">The coffee beans are molted through a thorough and rigorous roasting process.</h4>
+    </div>
+</div>
+</div>
+
+{{#each breadcrumbs}}
+<a href="{{url}}">{{name}}</a>
+{{/each}}
+
+<p>{{{page.content}}}</p>
+
+{{/partial}}
+
+{{> layout/base}}

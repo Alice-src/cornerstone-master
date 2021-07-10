@@ -1,0 +1,28 @@
+<div class="tabs">
+    {{#if product.related_products}}
+    <a class="tabs-title" href="#tab-related" aria-selected="true" controls="tab-related">{{lang 'products.related_products'}}</a>
+    <hr class="hr">
+    <div role="tabpanel" aria-hidden="false" class="tab-content has-jsContent is-active" id="tab-related">
+        {{#if settings.data_tag_enabled}}
+        {{> components/products/carousel products=product.related_products columns=6 list="Related Products"}}
+        {{else}}
+        {{> components/products/carousel products=product.related_products columns=6}}
+        {{/if}}
+    </div>
+    {{/if}}
+    {{#if product.similar_by_views}}
+        <h3 class="tab{{#unless product.related_products}} is-active{{/unless}}" role="presentation">
+            <a class="tab-title" href="#tab-similar" aria-selected="{{#if product.related_products}}false{{else}}true{{/if}}" controls="tab-similar">{{lang 'products.similar_by_views'}}</a>
+        </h3>
+    {{/if}}
+
+    <div class="tabs-contents">
+
+
+    {{#if product.similar_by_views}}
+        <div role="tabpanel" aria-hidden="{{#if product.related_products}}true{{else}}false{{/if}}" class="tab-content has-jsContent{{#unless product.related_products}} is-active{{/unless}}" id="tab-similar">
+            {{> components/products/carousel products=product.similar_by_views columns=6 list="Customers Also Viewed"}}
+        </div>
+    {{/if}}
+    </div>
+</div>

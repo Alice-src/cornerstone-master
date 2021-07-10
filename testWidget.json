@@ -1,0 +1,51 @@
+{
+  "name": "Custom banner Widget",
+  "template": "\n<div class=\"container\">\n    <div class=\"wrapper\" style=\"display: flex; {{#if reverse}} flex-direction: row-reverse {{/if}} \" >\n        <img src=\"{{image.src}}\" alt=\"{{imageAlt}}\">\n        <div>\n            <div class=\"title\">{{title}}</div>\n            <div class=\"description\">{{description}}</div>\n        </div>\n    </div>\n</div>",
+  "schema": [
+    {
+      "label": "Design",
+      "type": "tab",
+      "sections": [
+        {
+          "label": "Image",
+          "settings": [
+            {
+              "id": "image",
+              "type": "imageManager",
+              "default": {
+                "src": "https://example.com/example.png",
+                "type": "IMAGE_MANAGER"
+              }
+            },
+            {
+              "id": "imageAlt",
+              "type": "input",
+              "default": "alt for image"
+            },
+            {
+              "id": "reverse",
+              "type": "boolean",
+              "default": false,
+              "label": "reverse?"
+            }
+          ]
+        },
+        {
+          "label": "Texts",
+          "settings": [
+            {
+              "id": "title",
+              "type": "input",
+              "default": "title"
+            },
+            {
+              "id": "title",
+              "type": "input",
+              "default": "title"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

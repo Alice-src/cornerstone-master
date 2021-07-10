@@ -1,0 +1,270 @@
+// =============================================================================
+// FOOTER (CSS)
+// =============================================================================
+
+
+// Layout and columns
+// -----------------------------------------------------------------------------
+//
+// 1. To enable the grid's display: inline-block; to work properly, we need to
+//    remove the white-space that it creates between columns with font-size: 0;
+// 2. Re-set the font-size that was reduced to 0 in point 1 for children.
+//
+// -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+.footer {
+    background-color: $footer-background;
+    border-top: container("border");
+    padding: 0;
+    position: relative;
+}
+
+.footer-title-sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.footer-info {
+    @include grid-row($behavior: nest);
+    font-size: 0; // 1
+}
+
+.footer-newsletter {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+}
+.form {
+    margin: 0;
+    width: 80%;
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+}
+.form-field {
+    margin: 0 auto;
+}
+
+.footer-info-newsletter {
+    display: flex;
+    align-items: center;
+    @media (max-width: 800px) {
+        display: flow;
+    }
+}
+.info-newsletter {
+    margin: 0;
+    width: 20%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.8;
+    color: #000;
+    @media (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.container-footer {
+    max-width: 1700px;
+    padding: 0 3rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-info-col {
+    margin: 0;
+    color: stencilColor("color-textSecondary");
+    display: flex;
+    align-items: center;
+    font-size: fontSize("base"); // 2
+    vertical-align: top;
+    // TODO: specifically use vendor only for IE11 since overflow-wrap is not supported here 
+    -ms-word-break: break-all;
+    overflow-wrap: break-word;
+    @include breakpoint("small") {
+
+        width: 100%;
+    }
+
+    @include breakpoint("medium") {
+        width: width("4/12");
+    }
+
+}
+
+.footer-info-col--small {
+    @include breakpoint("medium") {
+        width: 100%;
+    }
+}
+
+.footer-info-col--social {
+    width: 100%;
+}
+
+.footer-info-col--left {
+    @include breakpoint("small") {
+        padding: 0;
+    }
+}
+
+.footer-info-col--right {
+    @include breakpoint("small") {
+        left: 50%;
+        position: inherit;
+        width: 50%;
+    }
+
+    @include breakpoint("medium") {
+        left: 0;
+        padding: 0;
+        text-align: right;
+        width: 100%;
+    }
+}
+
+
+// Content
+// -----------------------------------------------------------------------------
+
+.footer-info-heading {
+    color: $footer-heading-fontColor;
+    font-size: fontSize("base");
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.footer-info-list {
+    list-style: none;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 1.5rem auto;
+    padding: 1.5rem 0;
+    @media (max-width: 800px) {
+        display: flow;
+        padding: 0;
+    }
+
+    li {
+        padding: .75rem;
+    }
+
+    a {
+        color: #373737;
+        text-decoration: none;
+
+        // scss-lint:disable NestingDepth
+        &:hover {
+            color: stencilColor("color-textSecondary--hover");
+        }
+        // scss-lint:enable NestingDepth
+    }
+}
+
+.socialMedia {
+    margin: 0;
+    svg {
+        fill: black;
+        transition: all 0.15s ease;
+    }
+}
+
+.socialLinks-item {
+    margin: 0 .75rem .375rem 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000;
+
+    @include breakpoint("small") {
+
+    }
+
+    > .powered-by {
+        color: #373737;
+        font-size: 10px;
+        margin: 0;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    a {
+        color: #373737;
+        text-decoration: none;
+
+        // scss-lint:disable NestingDepth
+        &:hover {
+            color: stencilColor("color-textSecondary--hover");
+        }
+        // scss-lint:enable NestingDepth
+    }
+}
+
+.footer-telephone {
+    color: #373737;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.footer-payment-icons {
+    display: flex;
+    justify-content: center;
+    height: remCalc(40);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint("medium") {
+        margin-top: spacing("double");
+    }
+
+    .footer-payment-icon {
+        margin: auto .375rem;
+        height: 2.5rem;
+        vertical-align: middle;
+        width: remCalc(50);
+    }
+
+    svg {
+        fill: #a0be71;
+    }
+}
+
+.footer-geotrust-ssl-seal {
+    @include breakpoint("small") {
+        bottom: 0;
+        position: absolute;
+        right: 16px;
+    }
+
+    table {
+        margin: auto;
+    }
+}
+
+.footer-newsletter-summary {
+    text-align: left;
+}

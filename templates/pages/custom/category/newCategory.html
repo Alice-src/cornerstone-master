@@ -1,0 +1,17 @@
+{{#partial "page"}}
+
+{{#each categories}}
+
+<div>
+    {{> components/common/responsive-img
+    image=image
+    class="maxWidth"
+    }}
+    <p>Name: {{name}}</p>
+    <a href="{{url}}">See</a>
+</div>
+
+{{/each}}
+{{/partial}}
+
+{{> layout/base}}

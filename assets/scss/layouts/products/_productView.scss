@@ -1,0 +1,97 @@
+// =============================================================================
+// PRODUCT VIEW (CSS)
+// =============================================================================
+
+
+// Product view layout
+// -----------------------------------------------------------------------------
+
+.productView {
+    @include grid-row($behavior: "nest");
+    margin-left: -(spacing("base"));
+    margin-right: -(spacing("base"));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include breakpoint("medium") {
+        display: block;
+    }
+
+    .modal & {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+.productView--quickView {
+    .socialLinks-item--print {
+        display: none;
+    }
+}
+
+.productView-images {
+    @include grid-column(12);
+    padding-left: spacing("base");
+    padding-right: spacing("base");
+
+    @include breakpoint("medium") {
+        width: 66%;
+    }
+}
+
+.productView-details {
+    @include grid-column(12);
+    padding-left: spacing("base");
+    padding-right: spacing("base");
+
+    @include breakpoint("medium") {
+        clear: right;
+        float: right;
+        width: 33%;
+    }
+
+    .productView--quickView & {
+        position: relative;
+    }
+
+    &.product-data {
+        order: -1;
+    }
+}
+
+.productView-description {
+    border-top: 1px solid #dadada;
+    @include grid-column(12);
+    padding: 1.5rem 0 0;
+    margin: 0 1rem 0 1rem;
+    position: relative;
+    z-index: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+
+    .productView-title {
+        border-bottom: container("border");
+        margin-bottom: spacing("base");
+        padding-left: spacing("base");
+        padding-right: spacing("base");
+    }
+
+    .productView-description {
+        @include breakpoint("medium") {
+            clear: both;
+            float: none;
+            width: calc(100% - 2rem);
+        }
+    }
+}
+
+.links-block {
+    font-family: 'Open Sans', sans-serif;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}

@@ -1,0 +1,268 @@
+.container {
+  max-width: 1700px;
+  padding: 0 3rem;
+}
+
+.hero-block {
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+
+  &__image-wrap {
+    position: relative;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+
+  }
+
+  &__card {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    text-align: center;
+    background-color: rgba(255, 245, 238, 0.65);
+    max-width: 500px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: 1.5rem auto;
+      position: relative;
+      transform: none;
+      top: unset;
+      left: unset;
+      background-color: inherit;
+    }
+  }
+
+  &__header {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-style: normal;
+    padding-top: .5rem;
+    width: 100%;
+
+    @media (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+
+  &__hr {
+    border: none;
+    background-color: black;
+    height: 3px;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: 800px) {
+      height: 2px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 14px;
+    margin: 2.25rem 0 1.5rem 0;
+
+  }
+
+  &__btn {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    padding: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.categories {
+  padding: 2rem 0;
+  margin: 0;
+
+  &__featured-categories {
+    margin: 0 auto;
+    width: 100%;
+
+  }
+
+  &__featured-category {
+    width: 24%;
+    position: relative;
+    display: inline-block;
+    margin: .75rem auto;
+    @media (max-width: 800px) {
+      width: 49%;
+    }
+  }
+
+  &__image {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__name {
+    display: inline-block;
+    position: absolute;
+    width: 75%;
+    height: 30%;
+    padding: .75rem;
+    background-color: rgba(255, 245, 238, 0.65);
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-size: 1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+    text-align: center;
+  }
+}
+
+/* for home page */
+
+
+.container-newProducts {
+  margin-bottom: 5rem;
+}
+
+.banner-home {
+  padding: .75rem 0;
+  margin-bottom: 3rem;
+  background-color: #dadada;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #607244;
+  text-align: center;
+}
+
+.container-featured{
+  margin-bottom: 5rem;
+}
+
+.hr {
+  border: none;
+  background-color: black;
+  height: 2px;
+  width: 7%;
+  display: block;
+  margin: 25px auto 45px auto;
+}
+
+.block-products {
+  padding: 20px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  text-align: center;
+
+  &__name {
+    margin: 16px 0 0 0;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: #666;
+    margin-top: 12px;
+  }
+}
+
+.maxWidth {
+  max-width: 325px;
+}
+
+.blog-posts {
+  margin: 0 0 1.5rem 0;
+}
+
+.blog-card {
+  width: 24%;
+  display: inline-block;
+  margin: .75rem auto;
+  border: 1px solid #acb3be;
+  @media (max-width: 1000px) {
+    width: 48%;
+  }
+  @media (max-width: 800px) {
+    border: none;
+  }
+}
+
+.blog-card-img {
+  margin-bottom: 1.5rem;
+}
+
+.blog-card-body {
+  padding: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+}
+
+.blog-card-date {
+  text-align: center;
+  color: #666;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.blog-card-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  color: #000000;
+  letter-spacing: .25px;
+  margin: 0 0 .40rem;
+}
+
+.blog-card-text {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.blog-card-name {
+  text-align: center;
+  color: #666;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.articles-link {
+  text-align: center;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.posts-image {
+  width: 24%;
+  display: inline-block;
+  margin: .3rem auto;
+  @media (max-width: 800px) {
+    width: 49%;
+  }
+}
+
+
+
