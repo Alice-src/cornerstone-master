@@ -1,0 +1,16 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {
+      "newCategory.html": "/categoryx/"
+    },
+    "page": {
+      "my-page.html": "/milky/"
+    },
+    "product": {
+      "newProduct.html": "/name/"
+    }
+  },
+  "normalStoreUrl": "https://store-r3px8p21ve.mybigcommerce.com/",
+  "port": 3000
+}
